@@ -4,4 +4,6 @@ export default interface Jogo {
     link: string
     imagem: string
     descricao: string 
+    isActive: boolean
+    recommendedAge: number
 }
