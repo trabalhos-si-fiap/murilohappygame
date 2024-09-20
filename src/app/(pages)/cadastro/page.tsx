@@ -10,6 +10,8 @@ import toastAlert, { ToastPosition } from "@/utils/toastAlert";
 import { cadastrarUsuario } from "@/services/services";
 import { ToastContainer } from "react-toastify";
 
+
+
 export default function PaginaDeCadastro() {
   const [confirmaSenha, setConfirmaSenha] = useState<string>("");
   const router = useRouter();
@@ -223,7 +225,7 @@ export default function PaginaDeCadastro() {
             <div className="flex flex-col gap-1">
               <div className="flex gap-2 items-center">
                 <input type="checkbox" name="termos_de_uso" id="id_termos" />
-                <label htmlFor="id_termos">Li e aceito os termos de uso</label>
+                <label htmlFor="id_termos">Li e aceito os<a target="blank" rel="noopener noreferrer" className="font-black" href="/static/pdfs/termos-de-uso.pdf"> termos de uso</a></label>
               </div>
               <div className="flex gap-2 items-center">
                 <input
@@ -232,7 +234,7 @@ export default function PaginaDeCadastro() {
                   id="id_parental"
                 />
                 <label htmlFor="id_parental">
-                  Termos de autorização para menores de idade
+                   Li e aceito os <a target="blank" rel="noopener noreferrer" href="/static/pdfs/aut-parental.pdf" className="font-black"> termos de autorização para menores de idade</a>
                 </label>
               </div>
             </div>
